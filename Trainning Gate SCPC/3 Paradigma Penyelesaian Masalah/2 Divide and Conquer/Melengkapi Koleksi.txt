@@ -1,0 +1,32 @@
+Melengkapi Koleksi
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Saat ini, anda sedang gemar dengan suatu seri komik. Anda pun ingin melengkapi koleksi komik anda untuk seri tersebut. Anda lalu berencana untuk membelinya di toko buku. Saat ke toko buku, anda mengetahui bahwa di toko tersebut terdapat N jilid berbeda dari komik yang anda cari. Untuk melengkapi koleksi anda, anda sedang mencari Q jilid. Untuk setiap jilid yang anda cari, apakah jilid tersebut ada di toko buku tersebut?
+
+Format Masukan
+Baris pertama berisi dua buah bilangan bulat N dan Q, banyak jilid yang terdapat di toko dan banyak jilid yang anda cari.
+Baris kedua berisi N buah bilangan bulat Bi, jilid yang terdapat di toko tersebut.
+Q baris selanjutnya berisi sebuah bilangan bulat X, jilid yang anda cari.
+
+Format Keluaran
+Untuk setiap jilid yang anda cari, keluarkan satu baris berisi "ada" (tanpa tanda petik) jika jilid tersebut ada, atau satu baris berisi "tidak ada" (tanpa tanda petik) jika tidak ada.
+
+Contoh Masukan
+3 3
+4 10 100
+10
+9
+4
+
+Contoh Keluaran
+ada
+tidak ada
+ada
+
+Batasan
+1 ≤ N, Q ≤ 1e5
+1 ≤ Bi ≤ 1e6
+1 ≤ X ≤ 1e6
+Untuk setiap i < j, Bi < Bj.
