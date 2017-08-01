@@ -12,9 +12,9 @@ int main(){
 	int m=a[0], n=a[0];
 	for(int i=0;i<x;i++){
 		if (a[i]>m)
-      m=a[i];
+      			m=a[i];
 		if(a[i]<n)
-      n=a[i];
+      			n=a[i];
 	}
 	cout<<m<<" "<<n<<endl;
 	return 0;
