@@ -7,11 +7,11 @@ int main(){
 	cin >>x>>p;
 	for(int i=1;i<=x;i++){
 		if(i%p>0)
-      cout<<i;
+      			cout<<i;
 		else
-      cout<<'*'; 
+      			cout<<'*'; 
 		if(i!=x)
-      cout<<" ";
+      			cout<<" ";
 	}
 	cout<<endl;
 	return 0;
