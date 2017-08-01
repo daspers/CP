@@ -1,0 +1,21 @@
+Permasalahan Tiga Variabel
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Deskripsi kali ini cukup pendek: Diberikan N, ada berapa solusi dari A+B+C = N, apabila A, B, dan C merupakan bilangan bulat non-negatif?
+
+Format Masukan
+Satu baris berisi sebuah bilangan bulat N.
+
+Format Keluaran
+Banyaknya solusi dari A+B+C = N dengan A, B, dan C bilangan bulat non-negatif.
+
+Contoh Masukan
+1
+
+Contoh Keluaran
+3
+
+Batasan
+1 ≤ N ≤ 200
