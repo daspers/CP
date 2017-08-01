@@ -43,4 +43,3 @@ int main(){
 	per(0,m);
 	return 0;
 }
-Comp
