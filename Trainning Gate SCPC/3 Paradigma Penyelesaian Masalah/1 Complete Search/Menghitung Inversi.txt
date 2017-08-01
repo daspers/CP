@@ -1,0 +1,24 @@
+Menghitung Inversi
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Untuk suatu sekuens A, inversi dari A merupakan banyaknya pasangan i dan j, sehingga i < j dan Ai > Aj. Diberikan sekuens A dengan panjang N, berapakah inversi dari A?
+
+Format Masukan
+Baris pertama berisi sebuah bilangan bulat N, panjang dari A.
+Baris kedua berisi N buah bilangan bulat Ai, elemen dari A.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, inversi dari A.
+
+Contoh Masukan
+4
+3 2 4 1
+
+Contoh Keluaran
+4
+
+Batasan
+1 ≤ N ≤ 1.000
+A merupakan permutasi dari 1..N
