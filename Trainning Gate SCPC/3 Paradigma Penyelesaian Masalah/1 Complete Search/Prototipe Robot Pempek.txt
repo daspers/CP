@@ -1,0 +1,33 @@
+Prototipe Robot Pempek
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Rempek merupakan robot yang Pak Dengklek gunakan untuk menangkap ikan belida di Palembang. Sebelum mencapai performanya sekarang, Rempek telah melalui berbagai macam perubahan. Awalnya, prototipe Rempek hanya bisa mencari tahu jarak manhattan ikan belida yang paling dekat dengannya. Untuk mengujinya,  Pak Dengklek menggunakan lokasi yang berukuran N*M petak, dan memiliki K petak yang memiliki ikan belida. Petak (1,1) berada di kiri atas, sedangkan petak (N,M) berada di kanan bawah. Pak Dengklek akan melakukan Q buah percobaan, dimana di setiap percobannya, ia akan meletakkan Rempek di salah satu petak yang tidak memiliki ikan belida. Untuk setiap percobaan, berapa jarak Rempek dengan petak ikan belida terdekat?
+Format Masukan
+Baris pertama berisi 4 buah bilangan bulat N, M, K, dan Q, masing-masing menyatakan jumlah baris, jumlah kolom, jumlah petak yang memiliki ikan belida, dan banyak percobaan.
+N baris selanjutnya berisi M karakter, yang menyatakan lokasi percobaan Pak Dengklek. Petak kosong ditandai karakter '.', sedangkan petak yang memiliki ikan belida ditandai karakter 'X'.
+Q baris selanjutnya berisi dua buah bilangan bulat r dan c, masing-masing menyatakan baris dan kolom tempat Rempek diletakkan.
+
+Format Keluaran
+Untuk setiap percobaan, keluarkan satu baris berisi sebuah bilangan bulat, jarak Rempek dengan petak terdekat yang memiliki ikan belida.
+
+Contoh Masukan
+3 3 2 2
+X..
+...
+..X
+1 2
+2 2
+
+Contoh Keluaran
+1
+2
+
+Batasan
+1 ≤ N, M, Q ≤ 1.000
+1 ≤ K ≤ min(N*M-1,1.000)
+1 ≤ x ≤ N
+1 ≤ y ≤ M
+Dijamin setiap (x,y) merupakan petak kosong.
+Dijamin jumlah karakter 'X' adalah K.
