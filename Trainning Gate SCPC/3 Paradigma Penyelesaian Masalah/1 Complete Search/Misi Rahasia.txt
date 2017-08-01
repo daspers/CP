@@ -1,0 +1,30 @@
+Misi Rahasia
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Saudara kembar Pak Chanek yang jahat, Pak Kanech, sedang merencanakan sesuatu! Tentunya, rencana tersebut merupakan rencana yang jahat. Oleh karena itu, Pak Chanek berencana untuk mengirimkan sejumlah agen rahasia untuk menyelidiki rencana Pak Kanech dalam suatu misi rahasia..
+Agensi agen rahasia Pak Chanek memiliki N orang agen rahasia. Diketahui, terdapat M orang pertemanan di dalam agen rahasia tersebut. Pertemanan ini belum tentu bersifat transitif, yaitu jika A berteman dengan B, dan B berteman dengan C, maka A belum tentu berteman dengan C.
+Agar misi rahasia ini sukses, Pak Chanek ingin mengirimkan sebanyak mungkin agennya. Namun, jika di antara agen yang dikirim ada yang tidak berteman, maka misi ini kemungkinan besar gagal karena kurangnya kerjasama di antara mereka. Maka, Pak Chanek ingin agar semua agen yang dikirim berteman satu sama lain. Pak Chanek memiliki daftar pertemanan di agensinya, sekarang ia bingung menentukan jumlah agen yang ia kirim. Bantulah Pak Chanek!
+
+Format Masukan
+Baris pertama berisi dua buah bilangan bulat N dan M, banyak agen dan banyak pertemanan.
+M baris selanjutnya berisi dua buah bilangan bulat Ui dan Vi, yang berarti agen Ui dan Vi berteman.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, jumlah agen maksimum yang bisa Pak Chanek kirim.
+
+Contoh Masukan
+3 2
+1 2
+2 3
+
+Contoh Keluaran
+2
+
+Batasan
+1 ≤ N ≤ 20
+0 ≤ M ≤ N*(N-1)/2
+1 ≤ Ui, Vi ≤ N
+Ui ≠ Vi
+Setiap pertemanan akan diberikan paling banyak sekali
