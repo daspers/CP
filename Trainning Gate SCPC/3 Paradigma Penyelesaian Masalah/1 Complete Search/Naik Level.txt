@@ -1,0 +1,33 @@
+Naik Level
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Dalam update baru di MMORPG yang sering anda mainkan, tercantum bahwa saat ini ada bonus ketika level karakter naik. Bonus ini akan didapatkan apabila level naik saat membunuh monster biasa, dan experience yang didapatkan sama dengan experience yang dibutuhkan untuk naik level. Bonus ini tidak tanggung-tanggung, anda bisa mendapatkan barang dengan tingkat kelangkaan ultra rare.
+Di hadapan anda, saat ini terdapat N monster biasa yang dapat anda kalahkan. Berhubung 5 menit lagi ada pemadaman bergilir, anda tidak dapat mencari monster lain selain N monster itu untuk dikalahkan. Anda dapat mengetahui experience yang didapatkan ketika mengalahkan monster-monster tersebut. Apabila anda membutuhkan M experience untuk naik level, bisakah anda mendapatkan bonus, dengan mengalahkan satu atau beberapa monster tersebut?
+
+Format Masukan
+Baris pertama berisi dua buah bilangan bulat, N dan M, yaitu banyak monster dan experience yang dibutuhkan untuk naik level.
+Baris kedua berisi N buah bilangan bulat Ei, experience yang didapat apabila mengalahkan monster ke-i.
+
+Format Keluaran
+Satu baris berisi "bisa" (tanpa tanda petik) apabila anda dapat membunuh sejumlah monster yang total experience-nya M, atau "tidak bisa" (tanpa tanda petik) jika tidak.
+
+Contoh Masukan 1
+4 6
+2 3 8 1
+
+Contoh Keluaran 1
+bisa
+
+Contoh Masukan 2
+4 7
+2 3 8 1
+
+Contoh Keluaran 2
+tidak bisa
+
+Batasan
+1 ≤ N ≤ 20
+1 ≤ M ≤ 1e9
+1 ≤ Ei ≤ 1e8
