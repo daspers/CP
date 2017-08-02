@@ -1,1 +1,1 @@
-hi
+https://training.ia-toki.org/
