@@ -1,0 +1,31 @@
+Kualitas Bahan
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Anda baru saja membeli N bahan makanan di pasar. Anda tahu, bahan makanan ke-i memiliki tingkat gizi awal Xi. Selain tingkat gizi, bahan makanan juga memiliki tingkat pembusukan. Bahan makanan ke-i memiliki tingkat pembusukan Yi. Tingkat pembusukan ini akan mengurangi tingkat gizi setiap harinya. Untuk bahan ke-i, tingkat gizinya di hari pertama adalah Xi, hari kedua Xi-Yi, hari ketiga Xi-2*Yi dan seterusnya. Bahkan, tingkat gizi dapat menjadi negatif. Ketika anda memakan suatu bahan makanan, anda akan mendapatkan gizi sebesar tingkat gizinya pada hari itu.
+Berhubung anda dalam fase penghematan, anda harus makan tepat satu bahan makanan setiap harinya, bahkan walaupun gizinya negatif. Sekarang, anda ingin mengatur urutan makan N bahan makanan tersebut, sehingga total gizi yang anda dapatkan setelah N hari sebesar mungkin. Berapa total gizi maksimal yang bisa anda dapatkan?
+
+Format Masukan
+Baris pertama berisi sebuah bilangan bulat N, banyak bahan makanan.
+Baris kedua berisi N buah bilangan bulat Xi, tingkat gizi awal bahan ke-i.
+Baris ketiga berisi N buah bilangan bulat Yi, tingkat pembusukan bahan ke-i.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, total gizi maksimal yang didapat setelah N hari.
+
+Contoh Masukan
+4
+5 6 3 2
+4 2 1 3
+
+Contoh Keluaran
+6
+
+Penjelasan
+Urutan yang optimal adalah memakan bahan 1, 4, 2, lalu 3. Total gizinya adalah 5 + (-1) + 2 + 0 = 6.
+
+Batasan
+1 ≤ N ≤ 100.000
+1 ≤ Xi ≤ 100.000
+1 ≤ Yi ≤ 100.000
