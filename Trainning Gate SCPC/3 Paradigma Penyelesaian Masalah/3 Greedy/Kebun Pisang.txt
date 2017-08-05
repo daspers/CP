@@ -1,0 +1,32 @@
+Kebun Pisang
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Monyet-monyet di kota Botnang sedang resah. Pasalnya, kebun pisang mereka kemalingan! Kebun pisang monyet-monyet tersebut berbentuk petak 1xM, dimana tiap petak berisi beberapa pohon pisang. Untuk menanganinya, monyet-monyet tersebut berencana untuk merekrut monyet elit demi mengawasi kebun pisang mereka. Akhirnya, mereka mendapatkan N monyet elit. Monyet elit ini cukup aneh, karena mereka hanya bisa mengawasi suatu rentang tertentu. Monyet elit ke-i dapat mengawasi petak Li sampai Ri inklusif. Monyet elit ini juga perlu bayaran pisang yang cukup mahal. Oleh karena itu, monyet-monyet kota Botnang ingin merekrut sesedikit mungkin monyet elit, sehingga jika petak-petak yang monyet-monyet elit tersebut awasi digabung, maka didapatkan seluruh petak kebun pisang.
+Sebagai monyet paling pintar di Botnang, anda ditugaskan untuk mencari tahu jumlah monyet elit yang perlu direkrut, atau menyatakan bahwa walaupun semua monyet elit tersebut direkrut, masih ada petak yang tidak diawasi.
+
+Format Masukan
+Baris pertama berisi dua buah bilangan bulat N dan M, banyak monyet elit dan banyak petak kebun pisang.
+N baris selanjutnya berisi Li dan Ri, yang menyatakan rentang petak-petak yang dapat diawasi monyet elit ke-i.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, jumlah minimal monyet elit yang perlu direkrut, atau "-1" (tanpa tanda petik) jika walaupun semua monyet elit direkrut, tetap ada petak yang tidak diawasi.
+
+Contoh Masukan
+4 8
+1 1
+2 4
+4 7
+3 8
+
+Contoh Keluaran
+3
+
+Penjelasan
+Yang optimal adalah merekrut monyet ke 1, 2, dan 4.
+
+Batasan
+1 ≤ N ≤ 100.000
+1 ≤ M ≤ 1e9
+1 ≤ Li ≤ Ri ≤ M
