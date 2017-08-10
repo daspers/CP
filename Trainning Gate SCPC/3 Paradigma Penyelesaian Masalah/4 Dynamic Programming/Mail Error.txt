@@ -1,0 +1,26 @@
+Mail Error
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Anda baru saja menerima pesan yang katanya penting dari bos anda. Namun, entah karena berbagai gangguan, dari bit yang bergeser sampai konspirasi organisasi tertentu, pesan yang anda terima mengalami gangguan! Pesan tersebut malah muncul sebagai dua buah string, yang anda sebut S dan T. Anda lalu memiliki ide aneh, bahwa pesan yang dikirim sebenarnya adalah longest common subsequence dari S dan T. Sekarang, ketimbang menghubungi bos anda, sekarang anda justru sibuk mencari panjang pesan hasil ide aneh anda. Tentukanlah panjang pesan hasil ide aneh anda!
+ 
+Subsekuens dari suatu string adalah hasil menghapus sebagian atau seluruh karakter dari string tersebut. Sebagai contoh, "adc" adalah subsekuens dari "abdac", namun "db" bukan.
+Longest common subsequence dari S dan T adalah subsekuens terpanjang yang terdapat baik di S maupun di T.
+
+Format Masukan
+Baris pertama berisi string S dan baris kedua berisi string T, dimana S dan T adalah dua string yang diterima.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, panjang pesan hasil ide aneh anda.
+
+Contoh Masukan
+aczad
+azca
+
+Contoh Keluaran
+3
+
+Batasan
+1 ≤ |S|, |T| ≤ 1.000
+S dan T hanya akan terdiri dari karakter 'a' sampai 'z'.
