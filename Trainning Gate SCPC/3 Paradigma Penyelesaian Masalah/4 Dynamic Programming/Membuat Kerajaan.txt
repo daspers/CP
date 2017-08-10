@@ -1,0 +1,26 @@
+Membuat Kerajaan
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Terdapat sebuah dunia yang berbentuk segi empat dengan ukuran R*C. Dunia tersebut terbagi menjadi petak-petak berukuran 1*1, sehingga terdapat R*C petak. Jika suatu petak para baris i dan kolom j dikuasai, maka yang menguasai akan mendapatkan keuntungan sebesar Aij. Terkadang, menguasai sebuah petak justru mendatangkan kerugian, hal ini ditandai Aij yang bernilai negatif. Seorang penghuni dunia tersebut ingin membuat satu kerajaan yang berbentuk persegi panjang, serta mendapatkan keuntungan sebesar-besarnya. Tentukan keuntungan yang bisa ia dapat!
+
+Format Masukan
+Baris pertama berisi dua buah bilangan bulat R dan C, banyak baris dan kolom pada dunia.
+R baris selanjutnya berisi C buah bilangan bulat Aij, keuntungan yang didapat dari suatu petak.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, keuntungan maksimum yang bisa didapat.
+
+Contoh Masukan
+3 3
+3 -2 4
+3 -2 4
+4 -2 2
+
+Contoh Keluaran
+14
+
+Batasan
+1 ≤ R, C ≤ 100
+-100.000 ≤ Aij ≤ 100.000
