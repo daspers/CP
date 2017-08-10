@@ -1,0 +1,28 @@
+Grid Escape
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Anda baru saja terperangkap di sebuah maze yang berbentuk segiempat dan terdiri dari R*C ruang. Pembuat maze ini orang yang cukup baik, di ruangan anda sekarang terdapat sebuah peta yang berisi banyak informasi. Saat ini, Anda berada di pojok kiri atas maze, atau ruang di (1,1). Menurut peta itu, pintu keluar terdapat di pojok kanan bawah maze, atau ruang di (R,C). Selain itu, di maze tersebut terdapat N ruang jebakan, yang tentunya tidak boleh anda masuki jika ingin keluar hidup-hidup. Maze ini juga aneh, karena Anda cuma bisa bergerak ke kanan dan ke bawah. Dengan kata lain, jika Anda berada di ruang (a,b), anda hanya bisa bergerak ke ruang (a,b+1) atau (a+1,b). Sebagai matematikawan, Anda malah penasaran, sebenarnya, ada berapa cara Anda bisa mencapai pintu keluar?
+
+Format Masukan
+Baris pertama berisi 3 buah bilangan bulat R, C, dan N, masing-masing menyatakan banyak baris dan banyak kolom pada maze, serta banyak ruang jebakan.
+N baris selanjutnya berisi dua buah bilangan bulat bi dan ki, baris dan kolom ruang jebakan ke-i.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, banyaknya cara Anda bisa keluar dari maze. Berhubung angka ini bisa besar sekali, keluarkan jawabannya modulo 1.000.000.007.
+
+Contoh Masukan
+4 4 2
+2 2
+3 3
+
+Contoh Keluaran
+4
+
+Batasan
+1 ≤ R, C, N ≤ 1.000
+1 ≤ bi ≤ R
+1 ≤ ki ≤ C
+Tiap ruang jebakan merupakan ruang yang berbeda.
+Ruang awal dan pintu keluar bukan merupakan ruang jebakan.
