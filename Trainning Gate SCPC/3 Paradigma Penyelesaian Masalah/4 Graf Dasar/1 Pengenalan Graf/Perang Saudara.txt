@@ -1,0 +1,58 @@
+Perang Saudara
+Time limit: 1 s
+Memory limit: 64 MB
+
+Deskripsi
+Negeri Singapurkerto sedang mengalami masalah besar. Di negeri tersebut sedang marak terjadi perang antar kota. Peperangan biasa dilakukan dengan berhadap-hadapan secara langsung. Namun karena mereka tahu peperangan akan memberikan dampak buruk, seperti rusaknya infrastruktur kota, mereka tidak ingin berperang di kota mereka sendiri. Selain itu, tentunya mereka tidak akan memilih lokasi peperangan yang jauh dari kota mereka. Dengan kata lain, kota A dan Kota B akan berperang di kota C jika dan hanya jika terdapat jalan yang menghubungkan kota A dengan kota C dan juga kota B dengan kota C secara langsung.
+Untuk mencegah terjadinya perang antar kota, Badan Intelijen Singapuerkerto (BIS) ingin mengetahui berapa banyak kemungkinan lokasi perang antara kota A dengan kota B.
+Diberikan peta dari Negeri Singapurkerto dan Q pasang kota Ai dan Bi, tugas anda adalah membantu BIS menentukan untuk setiap pasang kota Ai dan Bi, ada berapa banyak kota yang mungkin menjadi lokasi perang kedua kota tersebut.
+
+Format Masukan
+Baris pertama berisi 2 buah bilangan N dan M yaitu banyaknya kota dan banyaknya jalan penghubung antar kota di negeri Singapurkerto.
+M baris berikutnya berisi 2 buah bilangan Ui dan Vi yang menandakan terdapat jalan penghubung antara kota Ui dan kota Vi.
+Baris selanjutnya berisi sebuah bilangan Q, yaitu banyaknya pertanyaan yang diajukan.
+Q baris berikutnya berisi 2 buah bilangan Ai dan Bi , yaitu pasangan kota yang akan berperang.
+
+Format Keluaran
+Keluarkan Q baris berisi sebuah bilangan bulat, jawaban dari masing-masing pertanyaan.
+Contoh Masukan 1
+
+3 2
+1 2
+2 3
+2
+1 3
+1 2
+
+Contoh Keluaran
+
+1
+0
+
+Contoh Masukan 1
+
+4 4
+1 2
+2 4
+1 3
+3 4
+1
+1 4
+
+Contoh Keluaran
+
+2
+
+Penjelasan
+Untuk contoh masukan 1, kota 1 dan kota 3 hanya dapat berperang di kota 2, sementara kota 1 dan kota 2 tidak memiliki tempat untuk berperang.
+Untuk contoh masukan 2, kota 1 dan kota 4 dapat berperang di kota 2 dan kota 3.
+Batasan
+
+    2 ≤ N ≤ 1.000
+    0 ≤ M ≤ min(100.000, N*(N-1)/2)
+    1 ≤ Q ≤ 1.000
+    1 ≤ Ui, Vi ≤ N
+    1 ≤ Ai, Bi ≤ N
+    Ui ≠ Vi untuk 1 ≤ i ≤ M
+    Setiap jalan akan muncul pada masukan tepat sekali
+    Ai ≠ Bi untuk 1 ≤ i ≤  Q
