@@ -1,6 +1,6 @@
 /*	File : jam.c 
-	Deskripsi :
-	Isi :
+	Deskripsi : 
+	Isi : Implementasi ADT JAM
 */
 
 #include <stdio.h>
@@ -52,9 +52,7 @@ void BacaJAM (JAM * J)
 		printf("Jam tidak valid\n");
 		scanf("%d %d %d",&HH,&MM,&SS);
 	}
-	Hour(*J)=HH;
-	Minute(*J)=MM;
-	Second(*J)=SS;
+	*J=MakeJAM(HH,MM,SS);
 }
 
 void TulisJAM (JAM J)
