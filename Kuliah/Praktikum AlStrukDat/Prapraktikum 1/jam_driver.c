@@ -28,8 +28,12 @@ int main(){
 	BacaJAM(&J2);
 	if(JNEQ(J1,J2))
 		printf("Kedua Waktu tidak sama\n");
-	else
+	else 
 		printf("Kedua Waktu sama\n");
+	if(JLT(J1,J2))
+		printf("Waktu 1 lebih kecil dibanding waktu 2\n");
+	else if(JGT(J1,J2))
+		printf("Waktu 1 lebih besar dibanding waktu 2\n");
 	printf("selisih waktu : %lds atau ", Durasi(J1,J2));
 	TulisJAM(DetikToJAM(Durasi(J1,J2)));
 	return 0;
