@@ -48,7 +48,7 @@ void BacaJAM (JAM * J)
 	int HH,MM,SS;
 	//Algoritma
 	scanf("%d %d %d",&HH,&MM,&SS);
-	while(IsJAMValid(HH,MM,SS)==false){
+	while(!IsJAMValid(HH,MM,SS)){
 		printf("Jam tidak valid\n");
 		scanf("%d %d %d",&HH,&MM,&SS);
 	}
@@ -112,7 +112,7 @@ boolean JEQ (JAM J1, JAM J2)
 boolean JNEQ (JAM J1, JAM J2)
 /* Mengirimkan true jika J1 tidak sama dengan J2 */
 {	//Algoritma
-	return !(Hour(J1)==Hour(J2))&&(Minute(J1)==Minute(J2))&&(Second(J1)==Second(J2));
+	return !JEQ(J1,J2);
 }
 
 boolean JLT (JAM J1, JAM J2)
@@ -167,7 +167,7 @@ long Durasi (JAM JAw, JAM JAkh)
 {	//Kamus
 	long J1 = JAMToDetik(JAw), J2 = JAMToDetik(JAkh);
 	//Algoritma
-	if(J1>J2)
+	if(JGT(JAw,JAkh))
 		J2+=24*3600;
 	return J2-J1;
 }
