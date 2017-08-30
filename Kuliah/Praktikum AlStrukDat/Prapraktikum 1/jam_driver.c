@@ -3,9 +3,34 @@
 */
 
 #include "jam.h"
+#include <stdio.h>
 
 int main(){
-	JAM J;
-	BacaJAM(&J);
+	//kamus
+	JAM J1, J2;
+	int n;
+	//algoritma
+	printf("Masukkan jam pertama secara berturut-turut JJ, MM, dan SS\n");
+	BacaJAM(&J1);
+	printf("Jam yang anda masukkan\n");
+	TulisJAM(J1);
+	printf("satu detik yang lalu : ");
+	TulisJAM(PrevDetik(J1));
+	printf("satu detik yang akan datang : ");
+	TulisJAM(NextDetik(J1));
+	printf("Masukkan nilai N : ");
+	scanf("%d", &n);
+	printf("%d detik yang akan datang : ",n);
+	TulisJAM(NextNDetik(J1,n));
+	printf("%d detik yang lalu : ",n);
+	TulisJAM(PrevNDetik(J1,n));
+	printf("Masukkan jam kedua secara berturut-turut JJ, MM, dan SS\n");
+	BacaJAM(&J2);
+	if(JNEQ(J1,J2))
+		printf("Kedua Waktu tidak sama\n");
+	else
+		printf("Kedua Waktu sama\n");
+	printf("selisih waktu : %lds atau ", Durasi(J1,J2));
+	TulisJAM(DetikToJAM(Durasi(J1,J2)));
 	return 0;
 }
