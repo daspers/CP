@@ -1,0 +1,24 @@
+Rata-Rata Maksimum
+Time limit: 1 s 
+Memory limit: 64 MB 
+ 
+Deskripsi
+Terdapat sebuah array A yang memiliki N buah bilangan bulat, dengan nilai array ke-i adalah Ai. Anda dapat mengambil beberapa anggota A. Anda harus mengambil setidaknya satu bilangan. Lalu, anda menghitung rata-rata bilangan yang anda ambil. Berapa rata-rata maksimum yang bisa didapat? Bulatkan jawabannya ke bilangan bulat terdekat.
+
+Format Masukan
+Baris pertama berisi sebuah bilangan bulat N, banyak anggota array.
+Baris kedua berisi N buah bilangan bulat Ai, anggota dari array tersebut.
+
+Format Keluaran
+Satu baris berisi sebuah bilangan bulat, hasil pembulatan rata-rata maksimum ke bilangan bulat terdekat.
+
+Contoh Masukan
+3
+5 5 5
+
+Contoh Keluaran
+5
+
+Batasan
+1 ≤ N ≤ 100.000
+-1e9 ≤ Ai ≤ 1e9
