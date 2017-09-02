@@ -16,12 +16,7 @@ int main(){
 			c+=d;
 		}
 		printf("Case #%d: ",i);
-		if(c>b)
-			printf("1\n");
-		else if(b%c)
-			printf("%ld\n", b/c+1);
-		else
-			printf("%ld\n", b/c);
+		printf("%ld\n", b/c+(b%c?1:0));
 	}
 	return 0;
 };
