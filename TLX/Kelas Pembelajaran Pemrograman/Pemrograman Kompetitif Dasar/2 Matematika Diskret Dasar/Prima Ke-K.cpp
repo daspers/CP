@@ -14,15 +14,13 @@ bool isprime(long a, long b){
 }
 
 int main(){
-	long a,ma=0,mi=77778;
+	long a,ma=0;
 	cin>>a;
 	b=new long [a];
 	for(long i=0;i<a;i++){
 		cin>>b[i];
 		if(b[i]>ma)
 			ma=b[i];
-		if(b[i]<mi)
-			mi=b[i];
 	}
 	long x=0;
 	p=new long [ma+1];
