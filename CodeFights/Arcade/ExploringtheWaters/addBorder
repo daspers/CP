@@ -1,0 +1,13 @@
+std::vector<std::string> y, addBorder(std::vector<std::string> p) {
+    string k="";
+    for(int i=0;i<p[0].size()+2;i++)
+        k=k+'*';
+    y.push_back(k);
+    for(int i=0;i<p.size();i++){
+        p[i]='*'+p[i];
+        p[i]+='*';
+        y.push_back(p[i]);
+    }
+    y.push_back(k);
+    return y;
+}
