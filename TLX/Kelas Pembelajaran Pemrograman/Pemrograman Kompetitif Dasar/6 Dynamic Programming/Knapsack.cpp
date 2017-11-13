@@ -16,12 +16,8 @@ int main(){
 	for(i=0;i<n;i++){
 		if(i>0){
 			for(j=1;j<=k;j++){
-				if(j>=c[i].first){
-					if(c[i].second + dp[i-1][j-c[i].first] > dp[i-1][j])
-						dp[i][j] = c[i].second+ dp[i-1][j-c[i].first];
-					else
-						dp[i][j] = dp[i-1][j];
-				}
+				if(j>=c[i].first)
+					dp[i][j] = max(c[i].second+ dp[i-1][j-c[i].first], dp[i-1][j];
 				else
 					dp[i][j] = dp[i-1][j];
 			}
@@ -30,7 +26,6 @@ int main(){
 			for(j=1;j<=k;j++){
 				if(j>=c[i].first)
 					dp[i][j] = c[i].second;
-
 				else
 					dp[i][j] = dp[i][j-1];
 			}
