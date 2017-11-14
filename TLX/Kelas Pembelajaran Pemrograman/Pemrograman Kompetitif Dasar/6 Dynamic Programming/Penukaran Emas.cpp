@@ -6,7 +6,7 @@ int n, dp[1003];
 
 int berat(int a){
 	if(dp[a]==-1)
-		dp[a] = max(a, max(a/4, berat(a/4))+max(a/3, berat(a/3))+max(a/2, berat(a/2)));
+		dp[a] = max(a, berat(a/4)+berat(a/3)+berat(a/2));
 	return dp[a];
 }
 
