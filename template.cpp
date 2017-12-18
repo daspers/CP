@@ -70,7 +70,7 @@ void readi(ll &number){
         number = ~number+1;
 }
 
-void readi(ull &number){
+void readull(ull &number){
     register int c;
     number = 0;
     c = getchar();
