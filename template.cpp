@@ -55,7 +55,7 @@ void readi(int &number){
         number = ~number+1;
 }
 
-void readi(ll &number){
+void readll(ll &number){
     bool negative = false;
     register int c;
     number = 0;
