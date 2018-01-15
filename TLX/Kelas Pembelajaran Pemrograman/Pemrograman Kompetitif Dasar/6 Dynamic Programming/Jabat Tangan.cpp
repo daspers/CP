@@ -13,10 +13,8 @@ ll n, dp[55];
 
 ll jabat(ll a){
 	if(dp[a]==-1){
-		if(a%2==1)
-			dp[a] = 0;
-		else{
-			dp[a] = 0;
+		dp[a] = 0;
+		if(a%2==0){
 			for(ll i=0;i<a;i+=2)
 				dp[a]+=jabat(i)*jabat(a-i-2);
 		}
