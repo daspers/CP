@@ -31,8 +31,9 @@ int main(){
 		}
 		scanf("%d %d", &a, &b);
 		scanf("%d %d", &c, &d);
-		priority_queue<pair<int, pair<int, int> > > q;
 		def[a][b] = s[a][b] == '#';
+		/* BFS with O(NM log NM)
+		priority_queue<pair<int, pair<int, int> > > q;
 		q.push({-def[a][b],{a,b}});
 		while(!q.empty()){
 			pair<int, pair<int, int> > temp = q.top();
@@ -45,6 +46,26 @@ int main(){
 					if(def[xx][yy]==-1){
 						def[xx][yy] = def[temp.se.fi][temp.se.se]+tam;
 						q.push({-def[xx][yy], {xx,yy}});
+					}
+				}
+			}
+		}*/
+		// BFS 0/1 with O(NM)
+		deque<pair<int, int> > q;
+		while(!q.empty()){
+			pair<int, int> temp = q.front();
+			q.pop_front();
+			for(i=0;i<4;i++){
+				int xx = temp.fi+dx[i];
+				int yy = temp.se+dy[i];
+				if(xx>=0&&xx<n&&yy>=0&&yy<m){
+					int tam  = s[xx][yy] == '#';
+					if(def[xx][yy]==-1){
+						def[xx][yy] = def[temp.se.fi][temp.se.se]+tam;
+						if(tam)
+							q.push_back({xx,yy});
+						else
+							q.push_front({xx,yy});
 					}
 				}
 			}
