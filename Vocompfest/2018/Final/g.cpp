@@ -28,7 +28,7 @@ struct line{
 		a = p2.x - p1.x;
 		b = p1.y - p2.y;
 		c = -b*p1.x -a*p1.y;
-		ll p = __gcd(a, __gcd(b,c));
+		ll p = __gcd(llabs(a), __gcd(llabs(b),llabs(c)));
 		a /= p;
 		b /= p;
 		c /= p;
