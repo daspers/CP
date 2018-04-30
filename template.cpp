@@ -77,3 +77,44 @@ void readull(ull &number){
     for (; (c>47 && c<58); c=getchar())
         number = number *10 + c - 48;
 }
+
+
+class Kelas{
+private:
+    type1 var1;
+    type2 var2;
+public:
+    // Dectructor
+    ~Kelas(){
+        //do something
+    }
+};
+
+class Point2D{
+private:
+    double x, y;
+public:
+    double getX(){
+        return x;
+    }
+    double getY(){
+        return y;
+    }
+    
+	fn to_origin(&mut self) {
+		self.parent.to_origin();
+		self.z = 0.0;
+	}
+	fn print(&self){
+		self.parent.print();
+		println!("z : {:?}", self.z);
+	}
+};
+
+
+int main(){
+    Kelas a;
+    Kelas b = a; // cctor
+    Kelas c;
+    c = a;  // assignment operator
+}
