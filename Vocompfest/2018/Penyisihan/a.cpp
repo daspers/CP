@@ -1,3 +1,10 @@
+/**
+ * Contest : VOCOMFEST 2018 Qualification
+ * Team    : I See The One
+ * Author  : Tony
+ * Problem : A - 3 Vertices 0TSP
+ */
+
 #include <bits/stdc++.h>
  
 using namespace std;

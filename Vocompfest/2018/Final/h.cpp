@@ -26,7 +26,7 @@ int main(){
 		for(int i=0;i<n;i++)
 			scanf("%lld", a+i);
 		himul = lomul = 1;
-		for(int i=n-1;i>0;i++){
+		for(int i=n-1;i>0;i--){
 			lomul *= a[i];
 			himul += lomul;
 		}
