@@ -21,12 +21,10 @@ const ll mod = 1e9+7;
 const double pi = acos(-1);
 
 int n,i,j,k,t;
+ll a, b;
 
 int main(){
-	scanf("%d", &t);
-	while(t--){
-		scanf("%d", &n);
-		
-	}
+	scanf("%lld,%lld", &a, &b);
+	printf("%lld\n", __gcd(a, b));
 	return 0;
 }

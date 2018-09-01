@@ -21,12 +21,19 @@ const ll mod = 1e9+7;
 const double pi = acos(-1);
 
 int n,i,j,k,t;
+string s;
+string enc[] = {"ei", "bi", "si", "di", "i", "ef", "dei",
+	"eitf", "ai", "djei", "kei", "el", "em", "en", "ou", "pi",
+"kiu", "ar", "es", "ti", "ju", "vi", "dabelju", "eks", "wai", "zi"};
 
 int main(){
-	scanf("%d", &t);
-	while(t--){
-		scanf("%d", &n);
-		
+	getline(cin, s);
+	for(char c : s){
+		if(c<'a' || c>'z')
+			cout<<c;
+		else
+			cout<<enc[c-'a'];
 	}
+	cout<<"\n";
 	return 0;
 }
