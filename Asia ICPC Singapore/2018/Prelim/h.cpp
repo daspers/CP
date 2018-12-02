@@ -37,7 +37,6 @@ int dfs(int v){
 			continue;
 		if(vis[x] == 2){
 			if(!udah.count({v, x})){
-				// cout<<v<<" "<<x<<endl;
 				ans++;
 				udah.insert({v, x});
 			}
@@ -124,7 +123,6 @@ int main(){
 		}
 		dfs(x);
 	}
-	// cout<<udah.size()<<endl;
 	printf("%d\n", ans);
 	return 0;
 }
