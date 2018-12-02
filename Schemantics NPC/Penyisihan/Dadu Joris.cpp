@@ -35,7 +35,7 @@ int main(){
 	memset(sudah, false, sizeof sudah);
 	for(j=1;j<=8;++j){
 		psum[j][0] = sqrt(j*j);
-		for(i=1;i<1000000;++i)
+		for(i=1;i<=1000000;++i)
 			psum[j][i] = psum[j][i-1] + sqrt(j*j+4*i);
 	}
 	scanf("%d", &t);
