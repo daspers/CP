@@ -21,9 +21,34 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+char s[100002];
+int cnt[100002];
 
 int main(){
-    scanf("%d", &n);
-
-    return 0;
+	memset(cnt, 0, sizeof cnt);
+	scanf("%s", s);
+	n = strlen(s);
+	bool ada = false;
+	for(j=i=0;i<n;++i){
+		if(s[i] == 'a'){
+			cnt[j] ++;
+			ada = true;
+		}
+		else if(s[i] == 'b'){
+			if(ada){
+				j++;
+				ada = false;
+			}
+		}
+	}
+	ll ans = 1;
+	for(i=0;cnt[i];++i){
+		// cout<<i<<" "<<cnt[i]<<endl;
+		ans = (ans + ans * cnt[i]) % mod;
+	}
+	ans--;
+	if(ans < 0)
+		ans += mod;
+	printf("%lld\n", ans);
+	return 0;
 }
