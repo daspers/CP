@@ -24,10 +24,22 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+char s[100002];
 
 int main(){
 	scanf("%d", &n);
-    
+    set<int> s;
+    while(n > 1){
+        s.insert(n);
+        ++n;
+        while(n % 10 == 0){
+            n/=10;
+        }
+    }
+    for(int i=1;i<10;++i){
+        s.insert(i);
+    }
+    printf("%d\n", (int)s.size());
 	return 0;
 }
 

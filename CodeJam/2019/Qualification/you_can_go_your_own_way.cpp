@@ -24,10 +24,23 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+char s[100002];
 
 int main(){
-	scanf("%d", &n);
-    
+	scanf("%d", &t);
+    for(int cc=1;cc<=t;++cc){
+        printf("Case #%d: ", cc);
+        scanf("%d", &n);
+        scanf("%s", s);
+        int m = 2*n-2;
+        for(int i=0;i<m;++i){
+            if(s[i]=='S')
+                printf("E");
+            else
+                printf("S");
+        }
+        puts("");
+    }
 	return 0;
 }
 

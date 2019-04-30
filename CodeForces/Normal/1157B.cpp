@@ -24,10 +24,26 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+char s[200002];
+int d[10];
 
 int main(){
 	scanf("%d", &n);
-    
+    scanf("%s", s);
+    for(int i=0;i<9;++i){
+        scanf("%d", d+i);
+    }
+    bool use = false;
+    for(int i=0;i<n;++i){
+        if(s[i] - '0' < d[s[i]-'1'] || (use && s[i] - '0' <= d[s[i]-'1'])){
+            s[i] = d[s[i]-'1'] + '0';
+            use = true;
+        }
+        else if(use){
+            break;
+        }
+    }
+    printf("%s\n", s);
 	return 0;
 }
 

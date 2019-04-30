@@ -24,10 +24,30 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+int a[200002], b[200002], c[200002];
+multiset<int> s;
 
 int main(){
 	scanf("%d", &n);
-    
+    for(int i=0;i<n;++i)
+        scanf("%d", a+i);
+    for(int i=0;i<n;++i){
+        scanf("%d", b+i);
+        s.insert(b[i]);
+    }
+    for(int i=0;i<n;++i){
+        int st = (n - a[i]) % n;
+        multiset<int>::iterator it = s.lower_bound(st);
+        if(it == s.end()){
+            it = s.begin();
+        }
+        c[i] = (a[i] + *it) % n;
+        s.erase(it);
+    }
+    for(int i=0;i<n;++i){
+        printf("%d ", c[i]);
+    }
+    puts("");
 	return 0;
 }
 

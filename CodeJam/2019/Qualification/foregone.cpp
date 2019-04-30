@@ -24,10 +24,32 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+char a[200], b[200];
 
 int main(){
-	scanf("%d", &n);
-    
+	scanf("%d", &t);
+    for(int cc=1;cc<=t;++cc){
+        printf("Case #%d: ", cc);
+        scanf("%s", a);
+        n = strlen(a);
+        reverse(a, a+n);
+        memset(b, 0, sizeof b);
+        bool gg = false;
+        for(int i=n-1;i>=0;--i){
+            if(a[i] =='4'){
+                a[i] = '3';
+                b[i] = '1';
+                gg = true;
+            }
+            else if(gg){
+                b[i] = '0';
+            }
+        }
+        int m = strlen(b);
+        reverse(b, b+m);
+        reverse(a, a+n);
+        printf("%s %s\n", a, b);
+    }
 	return 0;
 }
 
