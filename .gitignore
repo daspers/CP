@@ -32,3 +32,5 @@
 *.app
 
 .vscode
+input.in
+cmake-build-debug
