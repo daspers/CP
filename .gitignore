@@ -33,3 +33,4 @@
 
 .vscode
 *.in
+cmake-build-debug
