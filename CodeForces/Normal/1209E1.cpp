@@ -50,7 +50,6 @@ ll solve(int idx, int mask){
                 ans = max(ans, ma + solve(idx+1, mask ^ i));
             }
         }
-        // cerr<<idx<<" "<<mask<<" "<<ans<<endl;
     }
     return ans;
 }
@@ -65,29 +64,8 @@ int main(){
             }
         }
         ll ans = 0;
-        // if(m >= n){
-        //     vector<int> v;
-        //     for(int i=0;i<m;++i){
-        //         int ma = a[0][i];
-        //         for(int j=1;j<n;++j){
-        //             ma = max(ma, a[j][i]);
-        //         }
-        //         v.pb(ma);
-        //     }
-        //     sort(v.begin(), v.end(), greater<int>());
-        //     for(int i=0;i<n;++i){
-        //         ans += v[i];
-        //     }
-        // }
-        // if(m == 1){
-        //     for(int i=0;i<n;++i){
-        //         ans += a[i][0];
-        //     }
-        // }
-        // else {
-            memset(dp, -1, sizeof dp);
-            ans = solve(0, (1<<n)-1);
-        // }
+        memset(dp, -1, sizeof dp);
+        ans = solve(0, (1<<n)-1);
         printf("%lld\n", ans);
     }
 	return 0;
