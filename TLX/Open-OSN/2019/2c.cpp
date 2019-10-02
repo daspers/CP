@@ -71,7 +71,6 @@ void assignMin(int &a, int b){
     else{
         int x = find_par(a);
         int y = find_par(b);
-        // if(x != y) cerr<<"dapat "<<x<<" "<<y<<endl;
         if(x > y){
             par[x] = y;
         }
@@ -85,7 +84,6 @@ void assignMin(int &a, int b){
 int ql, qr, val;
 void update(int l, int r, int pos){
     if(lazy[pos]) {
-        // cerr<<pos<<" "<<lazy[pos]<<endl;
         assignMin(tree[pos], lazy[pos]);
         if(l!=r){
             assignMin(lazy[2*pos+1], lazy[pos]);
@@ -99,7 +97,6 @@ void update(int l, int r, int pos){
         if(l!=r){
             assignMin(lazy[2*pos+1], val);
             assignMin(lazy[2*pos+2], val);
-            // cerr<<"> "<<l<<" "<<r<<" "<<lazy[2*pos+1]<<" "<<lazy[2*pos+2]<<endl;
         }
         return;
     }
@@ -111,7 +108,6 @@ void update(int l, int r, int pos){
 
 int query(int l, int r, int pos){
     if(lazy[pos]) {
-        // cerr<<pos<<" "<<lazy[pos]<<endl;
         assignMin(tree[pos], lazy[pos]);
         if(l!=r){
             assignMin(lazy[2*pos+1], lazy[pos]);
@@ -132,7 +128,6 @@ int query(int l, int r, int pos){
 
 void apply(int l, int r, int pos){
     if(lazy[pos]) {
-        // cerr<<pos<<" "<<lazy[pos]<<endl;
         assignMin(tree[pos], lazy[pos]);
         if(l!=r){
             assignMin(lazy[2*pos+1], lazy[pos]);
