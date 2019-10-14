@@ -26,8 +26,11 @@ const double PI = acos(-1);
 int n,i,j,k,t;
 
 int main(){
-	scanf("%d", &n);
-	
+    char a, b;
+	scanf("%c %c", &a, &b);
+    a -= 'a' - 'A';
+    b += 'a' - 'A';
+    printf("/ %c %c \\\n", b, a);
 	return 0;
 }
 

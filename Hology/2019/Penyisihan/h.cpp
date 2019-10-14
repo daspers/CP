@@ -24,10 +24,27 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+int a[100002];
 
 int main(){
 	scanf("%d", &n);
-	
+    for(int i=0;i<n;++i){
+        scanf("%d", a+i);
+    }
+    sort(a, a+n, greater<int>());
+    vector<pii> v;
+    for(int i=0;i<n-1;){
+        if(a[i] - a[i+1] <= 1){
+            v.pb({a[i], a[i+1]});
+            i+=2;
+        }
+        else i+=1;
+    }
+    ll ans = 0;
+    for(int i=0;i<v.size();i+=2){
+        ans += 1LL*v[i].se * v[i+1].se;
+    }
+    printf("%lld\n", ans);
 	return 0;
 }
 

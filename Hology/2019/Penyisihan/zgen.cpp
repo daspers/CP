@@ -26,8 +26,13 @@ const double PI = acos(-1);
 int n,i,j,k,t;
 
 int main(){
-	scanf("%d", &n);
-	
+	scanf("%d %d", &n, &k);
+    srand(time(0));
+    printf("%d %d\n", n, k);
+    for(int i=0;i<n;++i){
+        printf("%d ", (int)rand());
+    }
+    puts("");
 	return 0;
 }
 

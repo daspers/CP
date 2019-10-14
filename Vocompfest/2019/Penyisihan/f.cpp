@@ -24,11 +24,28 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+bool isp[10000];
+vector<ll> p;
+int x;
 
 int main(){
+    memset(isp, 1, sizeof isp);
+    for(int i=2;i<10000;++i){
+        if(!isp[i]) continue;
+        p.pb(i);
+        for(int j=i*i;j<10000;j+=i){
+            isp[j] = false;
+        }
+    }
+    for(int i=1;i<p.size();++i){
+        p[i] += p[i-1];
+    }
 	scanf("%d", &n);
-	
-	return 0;
+    for(int i=0;i<n;++i){
+        scanf("%d", &x);
+        printf("%d\n", p[x-1]);
+    }
+    return 0;
 }
 
 /* Template Function */

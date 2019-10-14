@@ -26,8 +26,22 @@ const double PI = acos(-1);
 int n,i,j,k,t;
 
 int main(){
-	scanf("%d", &n);
-	
+	scanf("%d", &t);
+    for(int cc=1;cc<=t;++cc){
+        printf("Kasus #%d: ", cc);
+        scanf("%d", &n);
+        map<int,int> m;
+        for(int i=0;i<n;++i){
+            int x;
+            scanf("%d", &x);
+            m[x]++;
+        }
+        int ans = 1;
+        for(pii x : m){
+            ans = max(ans, x.se);
+        }
+        printf("%d\n", ans);
+    }
 	return 0;
 }
 

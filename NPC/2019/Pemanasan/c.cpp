@@ -24,10 +24,24 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+int a[10002], b[10002];
 
 int main(){
 	scanf("%d", &n);
-	
+    for(int i=0;i<n;++i){
+	    scanf("%d", a+i);
+    }
+    for(int i=0;i<n;++i){
+	    scanf("%d", b+i);
+    }
+    sort(a, a+n);
+    for(int i=0;i<n;++i){
+        int idx = upper_bound(a, a+n, b[i]) - a;
+        int ans = -1;
+        if(idx < n) ans = a[idx];
+        printf("%d ", ans);
+    }
+    puts("");
 	return 0;
 }
 

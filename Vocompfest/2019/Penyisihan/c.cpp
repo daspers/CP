@@ -24,10 +24,42 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
+int a[100005];
+int ri2[100005];
+int ri4[100005];
 
 int main(){
 	scanf("%d", &n);
-	
+    for(int i=1;i<=n;++i){
+        scanf("%d", a+i);
+    }
+    ri2[n+1] = ri4[n+1] = n+1;
+    ri2[n+2] = ri4[n+2] = n+2;
+    for(int i=n;i>=1;--i){
+        ri2[i] = ri2[i+1];
+        ri4[i] = ri4[i+1];
+        if(a[i] % 4 == 0){
+            ri4[i] = i;
+        }
+        else if(a[i] % 2 == 0){
+            ri2[i] = i;
+        }
+    }
+    // printArray(ri2, n+2);
+    // printArray(ri4, n+2);
+    ll ans = 0;
+    for(int i=1;i<=n;++i){
+        int r2 = i;
+        int r4 = i;
+        r2 = ri2[i];
+        r2 = min(ri2[r2+1], ri4[r2+1]);
+        r4 = ri4[i];
+        int r = min(r2, r4);
+        // cerr<<i<<" "<<r<<" "<<r2<<" "<<r4<<endl;
+        if(r > n) break;
+        ans += n - r + 1;
+    }
+    printf("%lld\n", ans);
 	return 0;
 }
 
