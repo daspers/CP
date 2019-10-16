@@ -39,27 +39,7 @@ int main(){
     if(1LL*n*(n+1)/2 > k){
         return puts("-1");
     }
-    if (1LL*n*(n+1)/2 == k){
-        printf("%lld\n", k);
-        for(int i=1;i<=n;++i) printf("%d ", i);
-        puts("");
-        for(int i=1;i<=n;++i) printf("%d ", i);
-        puts("");
-        return 0;
-    }
     ll sum = 0;
-    for(int i=n/2+1;i<=n;++i){
-        sum += 2*i;
-    }
-    if(n&1) sum -= n/2+1;
-    if(k >= sum){
-        printf("%lld\n", sum);
-        for(int i=1;i<=n;++i) printf("%d ", i);
-        puts("");
-        for(int i=n;i>0;--i) printf("%d ", i);
-        puts("");
-        return 0;
-    }
     vector<int> v, w;
     for(int i=1;i<=n;++i){
         v.pb(i);
@@ -94,12 +74,7 @@ int main(){
         if(cnt2[a] == cnt2[b]) return a < b;
         return cnt2[a] < cnt2[b];
     });
-    // printArray(v);
-    // printArray(w);
-    // printArray(cnt1+1, n);
-    // printArray(cnt2+1, n);
     for(int i=n-1;i>=0;--i){
-        // debug4(v[i], w[i], cnt1[v[i]], cnt2[w[i]]);
         if(v[i] != w[i] && cnt1[v[i]]>1 && cnt2[w[i]]>1){
             cnt1[v[i]]--;
             cnt1[w[i]]++;
