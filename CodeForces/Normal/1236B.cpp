@@ -31,41 +31,22 @@ const double PI = acos(-1);
 
 int n,i,j,k,t;
 int m;
-char s[100002];
-int cnt[20][20];
-ll cost[1<<20];
-ll dp[1<<20];
+
+int powmod(int base, int exp, int mod){
+    int ans = 1;
+    for(int val=base%mod;exp;exp>>=1){
+        if(exp&1)
+            ans = 1LL*ans*val%mod;
+        val = 1LL*val*val%mod;
+    }
+    return ans;
+}
 
 int main(){
     scanf("%d %d", &n, &m);
-    scanf("%s", s);
-    for(int i=1;i<n;++i){
-        if(s[i] != s[i-1]){
-            cnt[s[i]-'a'][s[i-1]-'a']++;
-            cnt[s[i-1]-'a'][s[i]-'a']++;
-        }
-    }
-    dp[0] = cost[0] = 0;
-    int m2 = 1<<m;
-    for(int i=1;i<m2;++i){
-        cost[i] = 0;
-        for(int j=0;j<m;++j){
-            if((i & (1<<j)) == 0) continue;
-            for(int k=0;k<m;++k){
-                if((i & (1<<k))) continue;
-                cost[i] += cnt[j][k];
-            }
-        }
-    }
-    for(int i=1;i<m2;++i){
-        dp[i] = 1e18;
-        for(int j=0;j<m;++j){
-            if(i&(1<<j)){
-                dp[i] = min(dp[i], dp[i ^ (1<<j)] + cost[i]);
-            }
-        }
-    }
-    printf("%lld\n", dp[m2-1]);
+    int ans = powmod(2, m, mod) - 1;
+    ans = powmod(ans, n, mod);
+    printf("%d\n", ans);
     return 0;
 }
 

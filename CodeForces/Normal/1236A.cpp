@@ -30,42 +30,20 @@ const ll mod = 1e9+7;
 const double PI = acos(-1);
 
 int n,i,j,k,t;
-int m;
-char s[100002];
-int cnt[20][20];
-ll cost[1<<20];
-ll dp[1<<20];
 
 int main(){
-    scanf("%d %d", &n, &m);
-    scanf("%s", s);
-    for(int i=1;i<n;++i){
-        if(s[i] != s[i-1]){
-            cnt[s[i]-'a'][s[i-1]-'a']++;
-            cnt[s[i-1]-'a'][s[i]-'a']++;
-        }
+    scanf("%d", &t);
+    while(t--){
+        int a,b,c;
+        scanf("%d %d %d", &a, &b, &c);
+        int ans = 0;
+        int ma = min(b, c/2);
+        ans += 3*ma;
+        b -= ma;
+        ma = min(a, b/2);
+        ans += 3*ma;
+        printf("%d\n", ans);
     }
-    dp[0] = cost[0] = 0;
-    int m2 = 1<<m;
-    for(int i=1;i<m2;++i){
-        cost[i] = 0;
-        for(int j=0;j<m;++j){
-            if((i & (1<<j)) == 0) continue;
-            for(int k=0;k<m;++k){
-                if((i & (1<<k))) continue;
-                cost[i] += cnt[j][k];
-            }
-        }
-    }
-    for(int i=1;i<m2;++i){
-        dp[i] = 1e18;
-        for(int j=0;j<m;++j){
-            if(i&(1<<j)){
-                dp[i] = min(dp[i], dp[i ^ (1<<j)] + cost[i]);
-            }
-        }
-    }
-    printf("%lld\n", dp[m2-1]);
     return 0;
 }
 
